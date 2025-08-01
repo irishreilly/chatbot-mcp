@@ -20,7 +20,7 @@ echo "✅ Port 8000 is free"
 
 # Start the backend server
 echo "🎯 Running backend Python server in background..."
-source /Users/paulreilly/Code/chatbot/.venv/bin/activate
+source ../.venv/bin/activate
 nohup python main.py > backend.log 2>&1 &
 
 echo "🎉 Backend server startup complete!"
