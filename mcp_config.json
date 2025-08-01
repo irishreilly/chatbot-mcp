@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "grafana": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "--network=host",
+        "-e",
+        "GRAFANA_URL=<YOUR_GRAFANA_URL>",
+        "-e",
+        "GRAFANA_API_KEY=<YOUR_API_KEY>",
+        "mcp/grafana"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "grafana_query_metrics",
+        "grafana_get_dashboards", 
+        "grafana_get_datasources",
+        "grafana_search",
+        "grafana_get_dashboard",
+        "grafana_query_range"
+      ]
+    }
+  }
+}
