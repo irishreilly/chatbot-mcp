@@ -1,0 +1,137 @@
+.error-boundary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.error-boundary__container {
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.error-boundary__icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.error-boundary__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.error-boundary__message {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.error-boundary__details {
+  text-align: left;
+  margin-bottom: 2rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.error-boundary__details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.error-boundary__error-info {
+  margin-top: 1rem;
+}
+
+.error-boundary__error-info p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.error-boundary__stack {
+  background-color: #343a40;
+  color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.error-boundary__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-boundary__button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.error-boundary__button--primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.error-boundary__button--primary:hover {
+  background-color: #0056b3;
+}
+
+.error-boundary__button--secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.error-boundary__button--secondary:hover {
+  background-color: #545b62;
+}
+
+.error-boundary__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .error-boundary {
+    padding: 1rem;
+  }
+  
+  .error-boundary__container {
+    padding: 2rem;
+  }
+  
+  .error-boundary__title {
+    font-size: 1.5rem;
+  }
+  
+  .error-boundary__actions {
+    flex-direction: column;
+  }
+  
+  .error-boundary__button {
+    width: 100%;
+  }
+}

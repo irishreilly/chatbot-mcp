@@ -1,0 +1,406 @@
+/* Recovery Panel Styles */
+
+.recovery-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.recovery-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.recovery-panel-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: #e9ecef;
+}
+
+.recovery-panel-content {
+  padding: 20px;
+  max-height: calc(80vh - 80px);
+  overflow-y: auto;
+}
+
+/* Recovery Sections */
+.recovery-section {
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.recovery-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.recovery-section-header:hover {
+  background: #e9ecef;
+}
+
+.recovery-section-header h4 {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.expand-icon {
+  transition: transform 0.2s;
+  color: #666;
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.recovery-section-content {
+  padding: 16px;
+  background: white;
+}
+
+/* Status Grid */
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.status-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.status-value {
+  font-weight: 600;
+  color: #333;
+}
+
+.status-value.offline {
+  color: #dc3545;
+}
+
+.status-value.online {
+  color: #28a745;
+}
+
+/* Recovery Actions */
+.recovery-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.recovery-button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.recovery-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.recovery-button.primary {
+  background: #007bff;
+  color: white;
+}
+
+.recovery-button.primary:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.recovery-button.secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.recovery-button.secondary:hover:not(:disabled) {
+  background: #545b62;
+}
+
+.recovery-button.warning {
+  background: #ffc107;
+  color: #212529;
+}
+
+.recovery-button.warning:hover:not(:disabled) {
+  background: #e0a800;
+}
+
+.last-action {
+  padding: 8px 12px;
+  background: #e7f3ff;
+  border-radius: 4px;
+  color: #0066cc;
+  font-size: 12px;
+}
+
+/* Feature List */
+.feature-list {
+  display: grid;
+  gap: 8px;
+}
+
+.feature-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.feature-label {
+  color: #666;
+}
+
+.feature-status {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.feature-status.available {
+  color: #28a745;
+}
+
+.feature-status.unavailable {
+  color: #dc3545;
+}
+
+/* Circuit Breakers */
+.circuit-breaker-list {
+  display: grid;
+  gap: 8px;
+}
+
+.circuit-breaker-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.breaker-service {
+  font-weight: 500;
+  color: #333;
+}
+
+.breaker-state {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.breaker-state.closed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.breaker-state.open {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.breaker-state.half-open {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.breaker-failures {
+  color: #666;
+  font-size: 12px;
+}
+
+/* Help Text */
+.recovery-help {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+}
+
+.recovery-help h5 {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.recovery-help ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.recovery-help li {
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.recovery-help strong {
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recovery-panel {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .recovery-actions {
+    grid-template-columns: 1fr;
+  }
+  
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .recovery-panel-content {
+    padding: 16px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .recovery-panel {
+    background: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .recovery-panel-header {
+    background: #4a5568;
+    border-bottom-color: #4a5568;
+  }
+  
+  .recovery-panel-header h3 {
+    color: #e2e8f0;
+  }
+  
+  .close-button {
+    color: #a0aec0;
+  }
+  
+  .close-button:hover {
+    background-color: #4a5568;
+  }
+  
+  .recovery-section {
+    border-color: #4a5568;
+  }
+  
+  .recovery-section-header {
+    background: #4a5568;
+  }
+  
+  .recovery-section-header h4 {
+    color: #e2e8f0;
+  }
+  
+  .recovery-section-content {
+    background: #2d3748;
+  }
+  
+  .status-item,
+  .feature-item,
+  .circuit-breaker-item {
+    background: #4a5568;
+  }
+  
+  .status-label,
+  .feature-label {
+    color: #a0aec0;
+  }
+  
+  .status-value {
+    color: #e2e8f0;
+  }
+  
+  .recovery-help {
+    background: #4a5568;
+    border-left-color: #3182ce;
+  }
+  
+  .recovery-help h5 {
+    color: #e2e8f0;
+  }
+  
+  .recovery-help li {
+    color: #a0aec0;
+  }
+  
+  .recovery-help strong {
+    color: #e2e8f0;
+  }
+  
+  .last-action {
+    background: #2b6cb0;
+    color: #bee3f8;
+  }
+}
