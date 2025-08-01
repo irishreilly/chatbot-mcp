@@ -1,6 +1,6 @@
 # MCP Chatbot Web Application
 
-A fully functional, full-stack chatbot web application with a JavaScript frontend and Python backend that leverages Model Context Protocol (MCP) servers for enhanced AI responses. It also has conversational memory, a UI status indicator, error handling, and the ability to fallback on an Anthropic model if the primary OpenAI model is inaccessible. 
+A fully functional, full-stack, chatbot web application with a JavaScript frontend and Python backend. It can serve as a client that can leverage Model Context Protocol servers for enhanced AI responses. It was successfully tested with Grafana integration using Docker to run the local MCP server, which in turn referenced a Grafana server via a service account token. It also includes conversational memory, a UI status indicator, error handling, and the ability to fallback on an Anthropic model if the primary OpenAI model is inaccessible for chat. 
 
 ## Architecture
 
